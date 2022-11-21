@@ -5,7 +5,7 @@ class Stage:
     def __init__(self):
         self.BACKGROUND_COLOR = variables.BACKGROUND_COLOR
 
-    def update(self, keys):
+    def update(self, keys): 
         pass
 
     def display(self, screen):

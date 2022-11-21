@@ -14,7 +14,7 @@ class TextStage(Stage):
 
         self.input_cooldown = 3
 
-    def update(self, keys):
+    def update(self, keys, dt):
         if len(self.buttons) != 0 and self.input_cooldown == 0:
             if keys[pygame.K_DOWN]:
                 if self.selected == None:

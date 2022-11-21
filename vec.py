@@ -33,6 +33,11 @@ class Vec:
             return self.x*other.x + self.y*other.y
         return Vec(self.x * other, self.y * other)
 
+    def normalized(self):
+
+        return self * (self.x ** 2 + self.y**2)**-.5
+
+
 ########################################
 
 if __name__ == "__main__":
