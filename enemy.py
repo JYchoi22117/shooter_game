@@ -12,13 +12,14 @@ class Enemy(Obj):
         self.height = 100
 
         self.aim = Vec(0, 0)
-        self.vel = 100
+        self.vel = 90
 
         self.hp = 100
         self.damage = 30
 
     def update(self, keys, dt):
 
+        ### **THINKING OF ENEMY ##
         velocity = (self.aim - self.pos).normalized()*self.vel
         self.pos += dt * velocity
 
@@ -35,7 +36,8 @@ class Enemy(Obj):
         # A Little bit of update
         self.aim = playerPos
 
-    def collsion(self, projectiles):
+
+    def collision(self, projectiles):
 
         for proj in projectiles:
             if ( self.pos.x - 0.5*self.width < proj.pos.x <self.pos.x + 0.5*self.width ) and ( self.pos.y - 0.5*self.height < proj.pos.y < self.pos.y + 0.5*self.height):

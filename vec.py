@@ -37,13 +37,8 @@ class Vec:
 
         return self * (self.x ** 2 + self.y**2)**-.5
 
+    def norm(self):
+        return (self.x**2 + self.y**2)**0.5
+
 
 ########################################
-
-if __name__ == "__main__":
-    v1 = vec(2, 3)
-    v2 = vec(-3, 2)
-
-    print(v1 * 2)
-    print(3 * v2)
-    print(v1 * v2)

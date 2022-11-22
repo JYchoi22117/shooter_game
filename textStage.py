@@ -44,7 +44,7 @@ class TextStage(Stage):
                 if self.selected != None:
                     return [self.buttons[self.selected].effect, None]
 
-        self.input_cooldown = max(self.input_cooldown - 1, 0)
+        self.input_cooldown = max(self.input_cooldown - 0.5, 0)
         return ["", None]
     
     def display(self, screen):
